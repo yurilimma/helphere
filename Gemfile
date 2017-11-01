@@ -130,6 +130,8 @@ group :development do
 
   gem 'capistrano-rails', '~>1.2'
 
+  gem 'capistrano-rvm'
+
 end
 
 
@@ -138,5 +140,5 @@ group :production do
 
  gem 'rails_12factor'
 
- gem 'mysql2'
+ gem 'mysql2', '~>0.3.18'
 end

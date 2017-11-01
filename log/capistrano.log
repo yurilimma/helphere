@@ -1,0 +1,141 @@
+# Logfile created on 2017-11-01 02:21:52 +0000 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-01 02:21:52 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d3064ee1] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [d3064ee1] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d3064ee1] Finished in 1.965 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [5463cd22] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [5463cd22] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [5463cd22] Finished in 0.411 seconds with exit status 0 (successful).
+  INFO [6197cfa3] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [6197cfa3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [6197cfa3] 	7e0bc1c3e259b4f8a510ceec6eb74689cd2c333a	HEAD
+  INFO [6197cfa3] Finished in 0.750 seconds with exit status 0 (successful).
+  INFO [6f1b9598] Running /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [6f1b9598] Command: /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases
+  INFO [6f1b9598] Finished in 0.423 seconds with exit status 0 (successful).
+  INFO [20878d60] Running /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets as deploy@45.55.62.16
+ DEBUG [20878d60] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets
+  INFO [20878d60] Finished in 0.412 seconds with exit status 0 (successful).
+  INFO [905cb821] Running /usr/bin/env mkdir -p /var/www/helphere/shared/config as deploy@45.55.62.16
+ DEBUG [905cb821] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/config
+  INFO [905cb821] Finished in 0.413 seconds with exit status 0 (successful).
+ DEBUG [85684923] Running [ -f /var/www/helphere/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [85684923] Command: [ -f /var/www/helphere/shared/config/database.yml ]
+ DEBUG [85684923] Finished in 0.424 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/helphere/shared/config/database.yml does not exist on 45.55.62.16
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-01 02:22:29 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [784392de] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [784392de] Command: /usr/bin/env mkdir -p /tmp
+  INFO [784392de] Finished in 1.767 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [a13c7b79] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [a13c7b79] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [a13c7b79] Finished in 0.413 seconds with exit status 0 (successful).
+  INFO [3982caa3] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [3982caa3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [3982caa3] 	7e0bc1c3e259b4f8a510ceec6eb74689cd2c333a	HEAD
+  INFO [3982caa3] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [3006f393] Running /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [3006f393] Command: /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases
+  INFO [3006f393] Finished in 0.407 seconds with exit status 0 (successful).
+  INFO [55bfc538] Running /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets as deploy@45.55.62.16
+ DEBUG [55bfc538] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets
+  INFO [55bfc538] Finished in 0.415 seconds with exit status 0 (successful).
+  INFO [aac150a6] Running /usr/bin/env mkdir -p /var/www/helphere/shared/config as deploy@45.55.62.16
+ DEBUG [aac150a6] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/config
+  INFO [aac150a6] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [1271ddee] Running [ -f /var/www/helphere/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [1271ddee] Command: [ -f /var/www/helphere/shared/config/database.yml ]
+ DEBUG [1271ddee] Finished in 0.412 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/helphere/shared/config/database.yml does not exist on 45.55.62.16
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-01 02:23:08 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [10aae9d9] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [10aae9d9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [10aae9d9] Finished in 1.823 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [3027d3da] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [3027d3da] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [3027d3da] Finished in 0.438 seconds with exit status 0 (successful).
+  INFO [f8c3a24b] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [f8c3a24b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [f8c3a24b] 	7e0bc1c3e259b4f8a510ceec6eb74689cd2c333a	HEAD
+  INFO [f8c3a24b] Finished in 0.618 seconds with exit status 0 (successful).
+  INFO [41b36205] Running /usr/bin/env mkdir -p /var/www/tcc-yuri/shared /var/www/tcc-yuri/releases as deploy@45.55.62.16
+ DEBUG [41b36205] Command: /usr/bin/env mkdir -p /var/www/tcc-yuri/shared /var/www/tcc-yuri/releases
+  INFO [41b36205] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [c61952f6] Running /usr/bin/env mkdir -p /var/www/tcc-yuri/shared/log /var/www/tcc-yuri/shared/tmp/pids /var/www/tcc-yuri/shared/tmp/cache /var/www/tcc-yuri/shared/tmp/sockets /var/www/tcc-yuri/shared/public/system /var/www/tcc-yuri/shared/public/assets as deploy@45.55.62.16
+ DEBUG [c61952f6] Command: /usr/bin/env mkdir -p /var/www/tcc-yuri/shared/log /var/www/tcc-yuri/shared/tmp/pids /var/www/tcc-yuri/shared/tmp/cache /var/www/tcc-yuri/shared/tmp/sockets /var/www/tcc-yuri/shared/public/system /var/www/tcc-yuri/shared/public/assets
+  INFO [c61952f6] Finished in 0.435 seconds with exit status 0 (successful).
+  INFO [b1987c88] Running /usr/bin/env mkdir -p /var/www/tcc-yuri/shared/config as deploy@45.55.62.16
+ DEBUG [b1987c88] Command: /usr/bin/env mkdir -p /var/www/tcc-yuri/shared/config
+  INFO [b1987c88] Finished in 0.440 seconds with exit status 0 (successful).
+ DEBUG [9bc67e8b] Running [ -f /var/www/tcc-yuri/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [9bc67e8b] Command: [ -f /var/www/tcc-yuri/shared/config/database.yml ]
+ DEBUG [9bc67e8b] Finished in 0.436 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/tcc-yuri/shared/config/database.yml does not exist on 45.55.62.16
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-01 02:23:48 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4ca87858] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [4ca87858] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4ca87858] Finished in 1.908 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [def76277] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [def76277] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [def76277] Finished in 0.444 seconds with exit status 0 (successful).
+  INFO [b574f905] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [b574f905] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [b574f905] 	7e0bc1c3e259b4f8a510ceec6eb74689cd2c333a	HEAD
+  INFO [b574f905] Finished in 0.634 seconds with exit status 0 (successful).
+  INFO [16c2d09d] Running /usr/bin/env mkdir -p /var/www/escamboapp/shared /var/www/escamboapp/releases as deploy@45.55.62.16
+ DEBUG [16c2d09d] Command: /usr/bin/env mkdir -p /var/www/escamboapp/shared /var/www/escamboapp/releases
+  INFO [16c2d09d] Finished in 0.443 seconds with exit status 0 (successful).
+  INFO [43110281] Running /usr/bin/env mkdir -p /var/www/escamboapp/shared/log /var/www/escamboapp/shared/tmp/pids /var/www/escamboapp/shared/tmp/cache /var/www/escamboapp/shared/tmp/sockets /var/www/escamboapp/shared/public/system /var/www/escamboapp/shared/public/assets as deploy@45.55.62.16
+ DEBUG [43110281] Command: /usr/bin/env mkdir -p /var/www/escamboapp/shared/log /var/www/escamboapp/shared/tmp/pids /var/www/escamboapp/shared/tmp/cache /var/www/escamboapp/shared/tmp/sockets /var/www/escamboapp/shared/public/system /var/www/escamboapp/shared/public/assets
+  INFO [43110281] Finished in 0.433 seconds with exit status 0 (successful).
+  INFO [33c0fca0] Running /usr/bin/env mkdir -p /var/www/escamboapp/shared/config as deploy@45.55.62.16
+ DEBUG [33c0fca0] Command: /usr/bin/env mkdir -p /var/www/escamboapp/shared/config
+  INFO [33c0fca0] Finished in 0.444 seconds with exit status 0 (successful).
+ DEBUG [67d3e9bc] Running [ -f /var/www/escamboapp/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [67d3e9bc] Command: [ -f /var/www/escamboapp/shared/config/database.yml ]
+ DEBUG [67d3e9bc] Finished in 0.443 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/escamboapp/shared/config/database.yml does not exist on 45.55.62.16
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-01 02:24:19 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a9267b19] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [a9267b19] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a9267b19] Finished in 1.902 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [74341da2] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [74341da2] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [74341da2] Finished in 0.438 seconds with exit status 0 (successful).
+  INFO [630ceb24] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [630ceb24] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [630ceb24] 	7e0bc1c3e259b4f8a510ceec6eb74689cd2c333a	HEAD
+  INFO [630ceb24] Finished in 0.637 seconds with exit status 0 (successful).
+  INFO [0893476f] Running /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [0893476f] Command: /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases
+  INFO [0893476f] Finished in 0.479 seconds with exit status 0 (successful).
+  INFO [e0f3a822] Running /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets as deploy@45.55.62.16
+ DEBUG [e0f3a822] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets
+  INFO [e0f3a822] Finished in 0.437 seconds with exit status 0 (successful).
+  INFO [3da7ead6] Running /usr/bin/env mkdir -p /var/www/helphere/shared/config as deploy@45.55.62.16
+ DEBUG [3da7ead6] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/config
+  INFO [3da7ead6] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG [2b3d4671] Running [ -f /var/www/helphere/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [2b3d4671] Command: [ -f /var/www/helphere/shared/config/database.yml ]
+ DEBUG [2b3d4671] Finished in 0.430 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/helphere/shared/config/database.yml does not exist on 45.55.62.16
