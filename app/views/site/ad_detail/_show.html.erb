@@ -1,0 +1,50 @@
+<div class="card mt-4">
+  <div class="card-body">
+    <br>
+    <h3 class="card-title"><%= @ad.title%></h3>
+    <h4><%= humanized_money_with_symbol @ad.price%></h4>
+    <p class="card-text"><%= md_to_html @ad.description.html_safe %>
+      <br>
+
+      <% if @ad.member.profile_member.blank?%>
+      <% else%>
+        <h4>Contato: 
+        <%= @ad.member.profile_member.phone %> </h4>
+      <% end %>
+    </p>
+    <div class="well well-sm">
+      <div class="ratings">
+        <p class="pull-right"> <%= @ad.comments.count %> <%= t('labels.comments')%> </p>
+        <%= rating_for @ad, 'quality' %>
+        <%= number_with_precision(@ad.avg_rating_dimension(@ad), precision: 1) %>
+      </div>
+</div>
+     
+  </div>
+</div>
+<hr>
+
+<div class="card card-outline-secondary my-4">
+  <div class="card-header">
+    <h4> Comentários </h4> 
+  </div>
+  <br/>
+  <div class="card-body">
+   <%= render partial: 'site/ad_detail/comments' %>
+  <hr>
+  <% if member_signed_in?%>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#commentModal">
+        Deixe um Comentario
+    </button>
+  <%else %>
+  <button type="button" class="btn btn-success" data-toggle="modal" disabled="disabled" data-target="#commentModal">
+        Deixe um Comentario
+    </button>
+  <% end%>
+
+  </div>
+</div>
+<!-- /.card -->
+
+<%= render partial: 'site/ad_detail/comment_modal' %>
+<br>

@@ -1,0 +1,21 @@
+<% @ads.each do |ad| %>
+<div class="col-sm-4 col-lg-4 col-md-4">
+<div class="thumbnail">
+    <div class="caption" style="height: 110px;">
+        <h4 class="pull-right"><%= humanized_money_with_symbol ad.price %></h4>
+        <h4>
+            <%= link_to truncate(ad.title, length: 17),  site_ad_detail_path(ad), remote: true, data: {push: :partial} %>
+        </h4>
+        <p>
+            <%= truncate(ad.description_short, length: 140) %></p>
+    </div>
+    <div class="ratings" style="padding: 5px;">
+        <p class="pull-right"> <%= ad.rates("quality").count %> <%= t('labels.reviews') %> </p>
+         <%= rating_for ad, 'quality', cancel: true %>  
+         
+    </div>
+</div>
+</div>
+<%end%>
+
+<center><%= paginate @ads%></center>

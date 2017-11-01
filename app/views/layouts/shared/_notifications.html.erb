@@ -1,0 +1,14 @@
+<% if notice %>
+    <%= javascript_tag "$.notify('#{notice}', {className:'success', globalPosition:'top center'});" %>
+    <!-- E O MESMO DE:
+    <script>
+        $.notify("<%= notice%>", "success")
+    </script>
+    -->
+
+<% end %>
+<% if alert %>
+<script>
+    $.notify("<%= alert%>",{className:'success', globalPosition: 'top center'})
+</script>
+<% end %>
