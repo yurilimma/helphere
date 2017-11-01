@@ -178,7 +178,6 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
-    pg (0.21.0)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (1.6.8)
@@ -327,7 +326,6 @@ DEPENDENCIES
   money-rails
   mysql2 (~> 0.3.18)
   paperclip (~> 5.0.0)
-  pg
   pundit
   rails (= 4.2.5)
   rails-assets-bootbox!
