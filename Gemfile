@@ -139,11 +139,15 @@ group :development do
 
   gem 'capistrano-rvm'
 
+  gem 'capistrano3-unicorn'
+
 end
 
 
 group :production do
 
  gem 'rails_12factor'
+
+ gem 'unicorn'
 
 end

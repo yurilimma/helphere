@@ -20,3 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  database: escamboapp
+  pool: 5
+  username: root
+  password: 123456
+  socket: /var/run/mysqld/mysqld.sock
+
