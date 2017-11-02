@@ -4061,3 +4061,285 @@ To update, run `gem install bundler`
   INFO [4607b209] Running /usr/bin/env echo "Branch master (at a35602a7ee9ba9fca33b69bc8f129223a6a8c9e4) deployed as release 20171102162908 by vagrant" >> /var/www/helphere/revisions.log as deploy@45.55.62.16
  DEBUG [4607b209] Command: cd /var/www/helphere/releases && /usr/bin/env echo "Branch master (at a35602a7ee9ba9fca33b69bc8f129223a6a8c9e4) deployed as release 20171102162908 by vagrant" >> /var/www/helphere/revisions.log
   INFO [4607b209] Finished in 0.414 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-02 16:42:35 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [70555657] Running [ -d ~/.rvm ] as deploy@45.55.62.16
+ DEBUG [70555657] Command: [ -d ~/.rvm ]
+ DEBUG [70555657] Finished in 1.757 seconds with exit status 1 (failed).
+ DEBUG [7c07a339] Running [ -d /usr/local/rvm ] as deploy@45.55.62.16
+ DEBUG [7c07a339] Command: [ -d /usr/local/rvm ]
+ DEBUG [7c07a339] Finished in 0.431 seconds with exit status 0 (successful).
+ DEBUG [01b44535] Running /usr/local/rvm/bin/rvm version as deploy@45.55.62.16
+ DEBUG [01b44535] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [01b44535] 	rvm 1.29.3 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [01b44535] Finished in 0.608 seconds with exit status 0 (successful).
+ DEBUG [b66d5a3c] Running /usr/local/rvm/bin/rvm current as deploy@45.55.62.16
+ DEBUG [b66d5a3c] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [b66d5a3c] 	ruby-2.3.5
+ DEBUG [b66d5a3c] Finished in 0.600 seconds with exit status 0 (successful).
+ DEBUG [0d38d948] Running /usr/local/rvm/bin/rvm default do ruby --version as deploy@45.55.62.16
+ DEBUG [0d38d948] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [0d38d948] 	ruby 2.3.5p376 (2017-09-14 revision 59905) [x86_64-linux]
+ DEBUG [0d38d948] Finished in 0.732 seconds with exit status 0 (successful).
+  INFO [d36804f2] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [d36804f2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d36804f2] Finished in 0.437 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [f9e83687] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [f9e83687] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [f9e83687] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO [abd2cc0e] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [abd2cc0e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [abd2cc0e] 	7b08146f3950e0e22d400bd20884af1417c0b163	HEAD
+  INFO [abd2cc0e] Finished in 0.665 seconds with exit status 0 (successful).
+  INFO [660eae31] Running /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [660eae31] Command: /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases
+  INFO [660eae31] Finished in 0.430 seconds with exit status 0 (successful).
+  INFO [588792a7] Running /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets as deploy@45.55.62.16
+ DEBUG [588792a7] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets
+  INFO [588792a7] Finished in 0.441 seconds with exit status 0 (successful).
+  INFO [4ec26585] Running /usr/bin/env mkdir -p /var/www/helphere/shared/config as deploy@45.55.62.16
+ DEBUG [4ec26585] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/config
+  INFO [4ec26585] Finished in 0.433 seconds with exit status 0 (successful).
+ DEBUG [cb686836] Running [ -f /var/www/helphere/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [cb686836] Command: [ -f /var/www/helphere/shared/config/database.yml ]
+ DEBUG [cb686836] Finished in 0.439 seconds with exit status 0 (successful).
+ DEBUG [86b07add] Running [ -f /var/www/helphere/shared/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [86b07add] Command: [ -f /var/www/helphere/shared/config/secrets.yml ]
+ DEBUG [86b07add] Finished in 0.440 seconds with exit status 0 (successful).
+ DEBUG [fbc5d458] Running [ -f /var/www/helphere/current/REVISION ] as deploy@45.55.62.16
+ DEBUG [fbc5d458] Command: [ -f /var/www/helphere/current/REVISION ]
+ DEBUG [fbc5d458] Finished in 0.434 seconds with exit status 0 (successful).
+ DEBUG [cc58c33a] Running /usr/bin/env cat /var/www/helphere/current/REVISION 2>/dev/null as deploy@45.55.62.16
+ DEBUG [cc58c33a] Command: /usr/bin/env cat /var/www/helphere/current/REVISION 2>/dev/null
+ DEBUG [cc58c33a] 	a35602a7ee9ba9fca33b69bc8f129223a6a8c9e4
+ DEBUG [cc58c33a] Finished in 0.440 seconds with exit status 0 (successful).
+ DEBUG [2975c0cc] Running [ -f /var/www/helphere/repo/HEAD ] as deploy@45.55.62.16
+ DEBUG [2975c0cc] Command: [ -f /var/www/helphere/repo/HEAD ]
+ DEBUG [2975c0cc] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/helphere/repo
+ DEBUG [6f792bf1] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [6f792bf1] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [6f792bf1] Finished in 0.446 seconds with exit status 0 (successful).
+  INFO [aba40779] Running /usr/bin/env git remote set-url origin https://github.com/yurilimma/helphere.git as deploy@45.55.62.16
+ DEBUG [aba40779] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git remote set-url origin https://github.com/yurilimma/helphere.git )
+  INFO [aba40779] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [45f59aad] Running /usr/bin/env git remote update --prune as deploy@45.55.62.16
+ DEBUG [45f59aad] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [45f59aad] 	Fetching origin
+ DEBUG [45f59aad] 	From https://github.com/yurilimma/helphere
+   a35602a..7b08146  master     -> master
+  INFO [45f59aad] Finished in 1.182 seconds with exit status 0 (successful).
+ DEBUG [6bc4b42f] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [6bc4b42f] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [6bc4b42f] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO [3c767e5e] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245 as deploy@45.55.62.16
+ DEBUG [3c767e5e] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245 )
+  INFO [3c767e5e] Finished in 0.435 seconds with exit status 0 (successful).
+  INFO [734cac5d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/helphere/releases/20171102164245 as deploy@45.55.62.16
+ DEBUG [734cac5d] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/helphere/releases/20171102164245 )
+  INFO [734cac5d] Finished in 0.663 seconds with exit status 0 (successful).
+ DEBUG [f7f2e2ef] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [f7f2e2ef] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [f7f2e2ef] Finished in 0.428 seconds with exit status 0 (successful).
+ DEBUG [13cad5fb] Running /usr/bin/env git rev-list --max-count=1 master as deploy@45.55.62.16
+ DEBUG [13cad5fb] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [13cad5fb] 	7b08146f3950e0e22d400bd20884af1417c0b163
+ DEBUG [13cad5fb] Finished in 0.438 seconds with exit status 0 (successful).
+ DEBUG [6422b1be] Running if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [6422b1be] Command: if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi
+ DEBUG [6422b1be] Finished in 0.439 seconds with exit status 0 (successful).
+  INFO [624305bd] Running /usr/bin/env echo "7b08146f3950e0e22d400bd20884af1417c0b163" >> REVISION as deploy@45.55.62.16
+ DEBUG [624305bd] Command: cd /var/www/helphere/releases/20171102164245 && /usr/bin/env echo "7b08146f3950e0e22d400bd20884af1417c0b163" >> REVISION
+  INFO [624305bd] Finished in 0.437 seconds with exit status 0 (successful).
+  INFO [cedef7a2] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245/config as deploy@45.55.62.16
+ DEBUG [cedef7a2] Command: /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245/config
+  INFO [cedef7a2] Finished in 0.430 seconds with exit status 0 (successful).
+ DEBUG [7c192ac8] Running [ -L /var/www/helphere/releases/20171102164245/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [7c192ac8] Command: [ -L /var/www/helphere/releases/20171102164245/config/database.yml ]
+ DEBUG [7c192ac8] Finished in 0.432 seconds with exit status 1 (failed).
+ DEBUG [dde9ebde] Running [ -f /var/www/helphere/releases/20171102164245/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [dde9ebde] Command: [ -f /var/www/helphere/releases/20171102164245/config/database.yml ]
+ DEBUG [dde9ebde] Finished in 0.431 seconds with exit status 0 (successful).
+  INFO [ebcd8903] Running /usr/bin/env rm /var/www/helphere/releases/20171102164245/config/database.yml as deploy@45.55.62.16
+ DEBUG [ebcd8903] Command: /usr/bin/env rm /var/www/helphere/releases/20171102164245/config/database.yml
+  INFO [ebcd8903] Finished in 0.439 seconds with exit status 0 (successful).
+  INFO [81b6c111] Running /usr/bin/env ln -s /var/www/helphere/shared/config/database.yml /var/www/helphere/releases/20171102164245/config/database.yml as deploy@45.55.62.16
+ DEBUG [81b6c111] Command: /usr/bin/env ln -s /var/www/helphere/shared/config/database.yml /var/www/helphere/releases/20171102164245/config/database.yml
+  INFO [81b6c111] Finished in 0.449 seconds with exit status 0 (successful).
+ DEBUG [66f0efb6] Running [ -L /var/www/helphere/releases/20171102164245/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [66f0efb6] Command: [ -L /var/www/helphere/releases/20171102164245/config/secrets.yml ]
+ DEBUG [66f0efb6] Finished in 0.440 seconds with exit status 1 (failed).
+ DEBUG [81f36f63] Running [ -f /var/www/helphere/releases/20171102164245/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [81f36f63] Command: [ -f /var/www/helphere/releases/20171102164245/config/secrets.yml ]
+ DEBUG [81f36f63] Finished in 0.432 seconds with exit status 0 (successful).
+  INFO [f02efa65] Running /usr/bin/env rm /var/www/helphere/releases/20171102164245/config/secrets.yml as deploy@45.55.62.16
+ DEBUG [f02efa65] Command: /usr/bin/env rm /var/www/helphere/releases/20171102164245/config/secrets.yml
+  INFO [f02efa65] Finished in 0.442 seconds with exit status 0 (successful).
+  INFO [67eebf1b] Running /usr/bin/env ln -s /var/www/helphere/shared/config/secrets.yml /var/www/helphere/releases/20171102164245/config/secrets.yml as deploy@45.55.62.16
+ DEBUG [67eebf1b] Command: /usr/bin/env ln -s /var/www/helphere/shared/config/secrets.yml /var/www/helphere/releases/20171102164245/config/secrets.yml
+  INFO [67eebf1b] Finished in 0.437 seconds with exit status 0 (successful).
+  INFO [fd9e1cb5] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245 /var/www/helphere/releases/20171102164245/tmp /var/www/helphere/releases/20171102164245/public as deploy@45.55.62.16
+ DEBUG [fd9e1cb5] Command: /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245 /var/www/helphere/releases/20171102164245/tmp /var/www/helphere/releases/20171102164245/public
+  INFO [fd9e1cb5] Finished in 0.437 seconds with exit status 0 (successful).
+ DEBUG [34d318e6] Running [ -L /var/www/helphere/releases/20171102164245/log ] as deploy@45.55.62.16
+ DEBUG [34d318e6] Command: [ -L /var/www/helphere/releases/20171102164245/log ]
+ DEBUG [34d318e6] Finished in 0.437 seconds with exit status 1 (failed).
+ DEBUG [268ae591] Running [ -d /var/www/helphere/releases/20171102164245/log ] as deploy@45.55.62.16
+ DEBUG [268ae591] Command: [ -d /var/www/helphere/releases/20171102164245/log ]
+ DEBUG [268ae591] Finished in 0.447 seconds with exit status 0 (successful).
+  INFO [23d20d4f] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171102164245/log as deploy@45.55.62.16
+ DEBUG [23d20d4f] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171102164245/log
+  INFO [23d20d4f] Finished in 0.436 seconds with exit status 0 (successful).
+  INFO [fa0bd137] Running /usr/bin/env ln -s /var/www/helphere/shared/log /var/www/helphere/releases/20171102164245/log as deploy@45.55.62.16
+ DEBUG [fa0bd137] Command: /usr/bin/env ln -s /var/www/helphere/shared/log /var/www/helphere/releases/20171102164245/log
+  INFO [fa0bd137] Finished in 0.436 seconds with exit status 0 (successful).
+ DEBUG [28bb568f] Running [ -L /var/www/helphere/releases/20171102164245/tmp/pids ] as deploy@45.55.62.16
+ DEBUG [28bb568f] Command: [ -L /var/www/helphere/releases/20171102164245/tmp/pids ]
+ DEBUG [28bb568f] Finished in 0.442 seconds with exit status 1 (failed).
+ DEBUG [89228b2b] Running [ -d /var/www/helphere/releases/20171102164245/tmp/pids ] as deploy@45.55.62.16
+ DEBUG [89228b2b] Command: [ -d /var/www/helphere/releases/20171102164245/tmp/pids ]
+ DEBUG [89228b2b] Finished in 0.436 seconds with exit status 1 (failed).
+  INFO [abd3c495] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/pids /var/www/helphere/releases/20171102164245/tmp/pids as deploy@45.55.62.16
+ DEBUG [abd3c495] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/pids /var/www/helphere/releases/20171102164245/tmp/pids
+  INFO [abd3c495] Finished in 0.437 seconds with exit status 0 (successful).
+ DEBUG [e4684d2d] Running [ -L /var/www/helphere/releases/20171102164245/tmp/cache ] as deploy@45.55.62.16
+ DEBUG [e4684d2d] Command: [ -L /var/www/helphere/releases/20171102164245/tmp/cache ]
+ DEBUG [e4684d2d] Finished in 0.434 seconds with exit status 1 (failed).
+ DEBUG [340e1389] Running [ -d /var/www/helphere/releases/20171102164245/tmp/cache ] as deploy@45.55.62.16
+ DEBUG [340e1389] Command: [ -d /var/www/helphere/releases/20171102164245/tmp/cache ]
+ DEBUG [340e1389] Finished in 0.445 seconds with exit status 1 (failed).
+  INFO [caaff024] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/cache /var/www/helphere/releases/20171102164245/tmp/cache as deploy@45.55.62.16
+ DEBUG [caaff024] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/cache /var/www/helphere/releases/20171102164245/tmp/cache
+  INFO [caaff024] Finished in 0.457 seconds with exit status 0 (successful).
+ DEBUG [6514fb62] Running [ -L /var/www/helphere/releases/20171102164245/tmp/sockets ] as deploy@45.55.62.16
+ DEBUG [6514fb62] Command: [ -L /var/www/helphere/releases/20171102164245/tmp/sockets ]
+ DEBUG [6514fb62] Finished in 0.515 seconds with exit status 1 (failed).
+ DEBUG [43654b91] Running [ -d /var/www/helphere/releases/20171102164245/tmp/sockets ] as deploy@45.55.62.16
+ DEBUG [43654b91] Command: [ -d /var/www/helphere/releases/20171102164245/tmp/sockets ]
+ DEBUG [43654b91] Finished in 0.455 seconds with exit status 1 (failed).
+  INFO [315cbd82] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/sockets /var/www/helphere/releases/20171102164245/tmp/sockets as deploy@45.55.62.16
+ DEBUG [315cbd82] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/sockets /var/www/helphere/releases/20171102164245/tmp/sockets
+  INFO [315cbd82] Finished in 0.477 seconds with exit status 0 (successful).
+ DEBUG [69e029cc] Running [ -L /var/www/helphere/releases/20171102164245/public/system ] as deploy@45.55.62.16
+ DEBUG [69e029cc] Command: [ -L /var/www/helphere/releases/20171102164245/public/system ]
+ DEBUG [69e029cc] Finished in 0.459 seconds with exit status 1 (failed).
+ DEBUG [d3b2db26] Running [ -d /var/www/helphere/releases/20171102164245/public/system ] as deploy@45.55.62.16
+ DEBUG [d3b2db26] Command: [ -d /var/www/helphere/releases/20171102164245/public/system ]
+ DEBUG [d3b2db26] Finished in 0.436 seconds with exit status 0 (successful).
+  INFO [db0ffd70] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171102164245/public/system as deploy@45.55.62.16
+ DEBUG [db0ffd70] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171102164245/public/system
+  INFO [db0ffd70] Finished in 0.480 seconds with exit status 0 (successful).
+  INFO [b0b6045d] Running /usr/bin/env ln -s /var/www/helphere/shared/public/system /var/www/helphere/releases/20171102164245/public/system as deploy@45.55.62.16
+ DEBUG [b0b6045d] Command: /usr/bin/env ln -s /var/www/helphere/shared/public/system /var/www/helphere/releases/20171102164245/public/system
+  INFO [b0b6045d] Finished in 0.581 seconds with exit status 0 (successful).
+ DEBUG [dc7ca964] Running [ -L /var/www/helphere/releases/20171102164245/public/assets ] as deploy@45.55.62.16
+ DEBUG [dc7ca964] Command: [ -L /var/www/helphere/releases/20171102164245/public/assets ]
+ DEBUG [dc7ca964] Finished in 0.446 seconds with exit status 1 (failed).
+ DEBUG [0ca299bf] Running [ -d /var/www/helphere/releases/20171102164245/public/assets ] as deploy@45.55.62.16
+ DEBUG [0ca299bf] Command: [ -d /var/www/helphere/releases/20171102164245/public/assets ]
+ DEBUG [0ca299bf] Finished in 0.440 seconds with exit status 1 (failed).
+  INFO [124e9601] Running /usr/bin/env ln -s /var/www/helphere/shared/public/assets /var/www/helphere/releases/20171102164245/public/assets as deploy@45.55.62.16
+ DEBUG [124e9601] Command: /usr/bin/env ln -s /var/www/helphere/shared/public/assets /var/www/helphere/releases/20171102164245/public/assets
+  INFO [124e9601] Finished in 0.429 seconds with exit status 0 (successful).
+ DEBUG [8a3bfdad] Running if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [8a3bfdad] Command: if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi
+ DEBUG [8a3bfdad] Finished in 0.435 seconds with exit status 0 (successful).
+ DEBUG [d2ccf80f] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/helphere/shared/bundle as deploy@45.55.62.16
+ DEBUG [d2ccf80f] Command: cd /var/www/helphere/releases/20171102164245 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/helphere/shared/bundle
+ DEBUG [d2ccf80f] 	The following gems are missing
+ DEBUG [d2ccf80f] 	 * net-ssh (4.2.0)
+ DEBUG [d2ccf80f] 	 * net-scp (1.2.1)
+ DEBUG [d2ccf80f] 	 * sshkit (1.14.0)
+ DEBUG [d2ccf80f] 	 * airbrussh (1.3.0)
+ DEBUG [d2ccf80f] 	 * coderay (1.1.2)
+ DEBUG [d2ccf80f] 	 * erubi (1.6.1)
+ DEBUG [d2ccf80f] 	 * better_errors (2.3.0)
+ DEBUG [d2ccf80f] 	 * debug_inspector (0.0.3)
+ DEBUG [d2ccf80f] 	 * binding_of_caller (0.7.2)
+ DEBUG [d2ccf80f] 	 * byebug (9.1.0)
+ DEBUG [d2ccf80f] 	 * capistrano (3.10.0)
+ DEBUG [d2ccf80f] 	 * capistrano-bundler (1.3.0)
+ DEBUG [d2ccf80f] 	 * capistrano-rails (1.3.0)
+ DEBUG [d2ccf80f] 	 * capistrano-rvm (0.1.2)
+ DEBUG [d2ccf80f] 	 * choice (0.2.0)
+ DEBUG [d2ccf80f] 	 * daemons (1.2.4)
+ DEBUG [d2ccf80f] 	 * eventmachine (1.0.9.1)
+ DEBUG [d2ccf80f] 	 * rack-protection (1.5.3)
+ DEBUG [d2ccf80f] 	 * sinatra (1.4.8)
+ DEBUG [d2ccf80f] 	 * thin (1.5.1)
+ DEBUG [d2ccf80f] 	 * skinny (0.2.4)
+ DEBUG [d2ccf80f] 	 * sqlite3 (1.3.13)
+ DEBUG [d2ccf80f] 	 * mailcatcher (0.6.5)
+ DEBUG [d2ccf80f] 	 * ruby-graphviz (1.2.3)
+ DEBUG [d2ccf80f] 	 * rails-erd (1.5.2)
+ DEBUG [d2ccf80f] 	 * spring (2.0.2)
+ DEBUG [d2ccf80f] 	 * web-console (2.3.0)
+ DEBUG [d2ccf80f] 	Install missing gems with `bundle install`
+ DEBUG [d2ccf80f] Finished in 1.072 seconds with exit status 1 (failed).
+  INFO [33177ed2] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/helphere/shared/bundle --without development test --deployment --quiet as deploy@45.55.62.16
+ DEBUG [33177ed2] Command: cd /var/www/helphere/releases/20171102164245 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/helphere/shared/bundle --without development test --deployment --quiet
+ DEBUG [33177ed2] 	The latest bundler is 1.16.0, but you are currently running 1.15.4.
+To update, run `gem install bundler`
+  INFO [33177ed2] Finished in 4.552 seconds with exit status 0 (successful).
+ DEBUG [42f717f5] Running if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [42f717f5] Command: if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi
+ DEBUG [42f717f5] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [7c33517e] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@45.55.62.16
+ DEBUG [7c33517e] Command: cd /var/www/helphere/releases/20171102164245 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [7c33517e] Finished in 3.175 seconds with exit status 0 (successful).
+ DEBUG [39442920] Running if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [39442920] Command: if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi
+ DEBUG [39442920] Finished in 0.451 seconds with exit status 0 (successful).
+  INFO [7918c87b] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245/assets_manifest_backup as deploy@45.55.62.16
+ DEBUG [7918c87b] Command: cd /var/www/helphere/releases/20171102164245 && /usr/bin/env mkdir -p /var/www/helphere/releases/20171102164245/assets_manifest_backup
+  INFO [7918c87b] Finished in 0.435 seconds with exit status 0 (successful).
+ DEBUG [637c8a37] Running /usr/bin/env ls /var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest* as deploy@45.55.62.16
+ DEBUG [637c8a37] Command: cd /var/www/helphere/releases/20171102164245 && /usr/bin/env ls /var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest*
+ DEBUG [637c8a37] 	/var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json
+ DEBUG [637c8a37] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG [484d2c9c] Running /usr/bin/env ls /var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest* as deploy@45.55.62.16
+ DEBUG [484d2c9c] Command: cd /var/www/helphere/releases/20171102164245 && /usr/bin/env ls /var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest*
+ DEBUG [484d2c9c] 	/var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json
+ DEBUG [484d2c9c] Finished in 0.439 seconds with exit status 0 (successful).
+  INFO [f63350d0] Running /usr/bin/env cp /var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json /var/www/helphere/releases/20171102164245/assets_manifest_backup as deploy@45.55.62.16
+ DEBUG [f63350d0] Command: cd /var/www/helphere/releases/20171102164245 && /usr/bin/env cp /var/www/helphere/releases/20171102164245/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json /var/www/helphere/releases/20171102164245/assets_manifest_backup
+  INFO [f63350d0] Finished in 0.436 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [5a9dcd09] Running if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [5a9dcd09] Command: if test ! -d /var/www/helphere/releases/20171102164245; then echo "Directory does not exist '/var/www/helphere/releases/20171102164245'" 1>&2; false; fi
+ DEBUG [5a9dcd09] Finished in 0.434 seconds with exit status 0 (successful).
+  INFO [ab9d983c] Running /usr/local/rvm/bin/rvm default do bundle exec rake db:migrate as deploy@45.55.62.16
+ DEBUG [ab9d983c] Command: cd /var/www/helphere/releases/20171102164245 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [ab9d983c] 	  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  INFO [ab9d983c] Finished in 2.886 seconds with exit status 0 (successful).
+  INFO [347dcaf6] Running /usr/bin/env ln -s /var/www/helphere/releases/20171102164245 /var/www/helphere/releases/current as deploy@45.55.62.16
+ DEBUG [347dcaf6] Command: /usr/bin/env ln -s /var/www/helphere/releases/20171102164245 /var/www/helphere/releases/current
+  INFO [347dcaf6] Finished in 0.440 seconds with exit status 0 (successful).
+  INFO [15fd6f44] Running /usr/bin/env mv /var/www/helphere/releases/current /var/www/helphere as deploy@45.55.62.16
+ DEBUG [15fd6f44] Command: /usr/bin/env mv /var/www/helphere/releases/current /var/www/helphere
+  INFO [15fd6f44] Finished in 0.432 seconds with exit status 0 (successful).
+ DEBUG [1f529706] Running /usr/bin/env ls -x /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [1f529706] Command: /usr/bin/env ls -x /var/www/helphere/releases
+ DEBUG [1f529706] 	20171101033401	20171101033931	20171101034138	20171102162225	20171102162908
+20171102164245
+ DEBUG [1f529706] Finished in 0.447 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 45.55.62.16
+ DEBUG [251cf58f] Running [ -d /var/www/helphere/current ] as deploy@45.55.62.16
+ DEBUG [251cf58f] Command: [ -d /var/www/helphere/current ]
+ DEBUG [251cf58f] Finished in 0.441 seconds with exit status 0 (successful).
+ DEBUG [8256f237] Running /usr/bin/env readlink /var/www/helphere/current as deploy@45.55.62.16
+ DEBUG [8256f237] Command: /usr/bin/env readlink /var/www/helphere/current
+ DEBUG [8256f237] 	/var/www/helphere/releases/20171102164245
+ DEBUG [8256f237] Finished in 0.435 seconds with exit status 0 (successful).
+  INFO [b15b7bca] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171101033401 as deploy@45.55.62.16
+ DEBUG [b15b7bca] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171101033401
+  INFO [b15b7bca] Finished in 0.462 seconds with exit status 0 (successful).
+ DEBUG [65487d63] Running if test ! -d /var/www/helphere/releases; then echo "Directory does not exist '/var/www/helphere/releases'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [65487d63] Command: if test ! -d /var/www/helphere/releases; then echo "Directory does not exist '/var/www/helphere/releases'" 1>&2; false; fi
+ DEBUG [65487d63] Finished in 0.438 seconds with exit status 0 (successful).
+  INFO [0c05ab72] Running /usr/bin/env echo "Branch master (at 7b08146f3950e0e22d400bd20884af1417c0b163) deployed as release 20171102164245 by vagrant" >> /var/www/helphere/revisions.log as deploy@45.55.62.16
+ DEBUG [0c05ab72] Command: cd /var/www/helphere/releases && /usr/bin/env echo "Branch master (at 7b08146f3950e0e22d400bd20884af1417c0b163) deployed as release 20171102164245 by vagrant" >> /var/www/helphere/revisions.log
+  INFO [0c05ab72] Finished in 0.434 seconds with exit status 0 (successful).
