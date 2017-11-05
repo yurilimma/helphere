@@ -4,6 +4,15 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  #Devise E-mail
+  config.action_mailer.default_url_options = { host: 'helpaqui.com.br', port: 3000 }
+
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+    api_key: Rails.application.secrets.MAILGUN_SECRET_API_KEY,
+    domain: 'mg.helpaqui.com.br',
+  }
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.

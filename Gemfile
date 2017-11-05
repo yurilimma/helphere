@@ -150,4 +150,6 @@ group :production do
 
  gem 'unicorn'
 
+ gem 'mailgun-ruby', '~>1.1.4'
+
 end
