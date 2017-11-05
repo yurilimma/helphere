@@ -8,6 +8,9 @@
         </h4>
         <p>
             <%= truncate(ad.description_short, length: 140) %></p>
+            <div class="ratings" style="padding: 5px;">
+                <p class="pull-right"> <%= ad.rates("quality").count %> <%= t('labels.reviews') %> </p>
+            </div>
     </div>
     <div class="ratings" style="padding: 5px;">
         <p class="pull-right"> <%= ad.rates("quality").count %> <%= t('labels.reviews') %> </p>
