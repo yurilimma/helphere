@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+gem 'pagseguro-oficial', '~> 2.5.0'
 
 # bootstrap sb-admin gem 
 gem 'bootstrap_sb_admin_base_v2'
@@ -85,6 +86,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+
 source 'https://rails-assets.org' do 
 
   gem 'rails-assets-notifyjs'
@@ -140,6 +143,8 @@ group :development do
   gem 'capistrano-rvm'
 
   gem 'capistrano3-unicorn'
+
+  gem 'rack-cors', :require => 'rack/cors'
 
 end
 

@@ -1,5 +1,8 @@
 class Ad < ActiveRecord::Base
   
+  #enum status
+  enum status: [:active, :processing, :sold]
+
   # classificacao servico
   ratyrate_rateable 'quality'
 

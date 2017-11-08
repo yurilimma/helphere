@@ -13,6 +13,12 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
   end
 
+  namespace :checkout do
+    resources :payments, only: [:create]
+    resources :notifications, only: [:create]
+    
+  end
+
   namespace :site do
   get 'home', to: 'home#index'
   get 'search', to: 'search#ads' 

@@ -9,9 +9,32 @@
       <% if @ad.member.profile_member.blank?%>
       <% else%>
         <h4>Contato: 
-        <%= @ad.member.profile_member.phone %> </h4>
+        <%= @ad.member.profile_member.phone %>
+        
+           
+        </h4>
+        <% if @ad.active? %>
+          <% if member_signed_in? %>
+            <div class="text-right">
+                <%= form_tag(checkout_payments_path) do %>
+                  <%= hidden_field_tag :ad_id, @ad.id %>
+                  <%= submit_tag "Solicitar", class:"btn btn-success", data: { confirm: "Deseja realmente solicitar esse serviço?"}%>
+                <% end %>
+            </div>
+          <% else %>
+            <div class="text-right">
+                <%= link_to "Efetue login para solicitar", new_member_session_path, class:"btn btn-success", disabled: true %>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="text-right">
+            <%= link_to "#{@ad.status_i18n}", '#', class:"btn btn-success", disabled: true %>
+          </div>
       <% end %>
+      <%end %>
     </p>
+  
+   
     <div class="well well-sm">
       <div class="ratings">
         <p class="pull-right"> <%= @ad.comments.count %> <%= t('labels.comments')%> </p>
