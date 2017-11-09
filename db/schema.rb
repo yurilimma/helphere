@@ -109,7 +109,7 @@ ActiveRecord::Schema.define(version: 20171107080719) do
     t.datetime "updated_at",             null: false
   end
 
-  add_index "orders", ["ad_id"], name: "index_orders2_on_ad_id"
+  add_index "orders", ["ad_id"], name: "index_orders_on_ad_id"
   add_index "orders", ["member_id"], name: "index_orders_on_member_id"
 
   create_table "overall_averages", force: :cascade do |t|
