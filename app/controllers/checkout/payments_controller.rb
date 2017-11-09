@@ -15,7 +15,7 @@ class Checkout::PaymentsController < ApplicationController
 	  #passando status do ad de active para processing
 	  ad.processing!
 
-	  order = Order.create(ad: ad, buyer_id: current_member.id )
+	  order = Order.create(ad: ad, member_id: current_member.id )
 
 	  order.waiting!
 

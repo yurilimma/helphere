@@ -104,13 +104,13 @@ ActiveRecord::Schema.define(version: 20171107080719) do
   create_table "orders", force: :cascade do |t|
     t.integer  "ad_id"
     t.integer  "status",     default: 0
-    t.integer  "buyer_id"
+    t.integer  "member_id"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
 
   add_index "orders", ["ad_id"], name: "index_orders_on_ad_id"
-  add_index "orders", ["buyer_id"], name: "index_orders_on_buyer_id"
+  add_index "orders", ["member_id"], name: "index_orders_on_member_id"
 
   create_table "overall_averages", force: :cascade do |t|
     t.integer  "rateable_id"

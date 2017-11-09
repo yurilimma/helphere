@@ -4,6 +4,7 @@ class Member < ActiveRecord::Base
 
 	#associations
 	has_many :ads
+  has_many :orders
 	has_one :profile_member
 	accepts_nested_attributes_for :profile_member
 
