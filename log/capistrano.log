@@ -8813,3 +8813,727 @@ FOREIGN KEY (`buyer_id`)
 /usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `<main>'
  DEBUG [bded30a1] 	Tasks: TOP => db:migrate
  DEBUG [bded30a1] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-09 09:31:43 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5264a031] Running [ -d ~/.rvm ] as deploy@45.55.62.16
+ DEBUG [5264a031] Command: [ -d ~/.rvm ]
+ DEBUG [5264a031] Finished in 1.643 seconds with exit status 1 (failed).
+ DEBUG [f748a892] Running [ -d /usr/local/rvm ] as deploy@45.55.62.16
+ DEBUG [f748a892] Command: [ -d /usr/local/rvm ]
+ DEBUG [f748a892] Finished in 0.369 seconds with exit status 0 (successful).
+ DEBUG [4ce358af] Running /usr/local/rvm/bin/rvm version as deploy@45.55.62.16
+ DEBUG [4ce358af] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [4ce358af] 	rvm 1.29.3 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [4ce358af] Finished in 0.602 seconds with exit status 0 (successful).
+ DEBUG [4b9f61b0] Running /usr/local/rvm/bin/rvm current as deploy@45.55.62.16
+ DEBUG [4b9f61b0] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [4b9f61b0] 	ruby-2.3.5
+ DEBUG [4b9f61b0] Finished in 0.529 seconds with exit status 0 (successful).
+ DEBUG [7380fe8a] Running /usr/local/rvm/bin/rvm default do ruby --version as deploy@45.55.62.16
+ DEBUG [7380fe8a] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [7380fe8a] 	ruby 2.3.5p376 (2017-09-14 revision 59905) [x86_64-linux]
+ DEBUG [7380fe8a] Finished in 0.659 seconds with exit status 0 (successful).
+  INFO [613f38c5] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [613f38c5] Command: /usr/bin/env mkdir -p /tmp
+  INFO [613f38c5] Finished in 0.370 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [7622a046] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [7622a046] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [7622a046] Finished in 0.381 seconds with exit status 0 (successful).
+  INFO [e96a7181] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [e96a7181] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [e96a7181] 	29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337	HEAD
+  INFO [e96a7181] Finished in 0.591 seconds with exit status 0 (successful).
+  INFO [6c7997a3] Running /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [6c7997a3] Command: /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases
+  INFO [6c7997a3] Finished in 0.360 seconds with exit status 0 (successful).
+  INFO [33ded829] Running /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets as deploy@45.55.62.16
+ DEBUG [33ded829] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets
+  INFO [33ded829] Finished in 0.366 seconds with exit status 0 (successful).
+  INFO [6e58b000] Running /usr/bin/env mkdir -p /var/www/helphere/shared/config as deploy@45.55.62.16
+ DEBUG [6e58b000] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/config
+  INFO [6e58b000] Finished in 0.368 seconds with exit status 0 (successful).
+ DEBUG [370dd89d] Running [ -f /var/www/helphere/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [370dd89d] Command: [ -f /var/www/helphere/shared/config/database.yml ]
+ DEBUG [370dd89d] Finished in 0.371 seconds with exit status 0 (successful).
+ DEBUG [2360f8a2] Running [ -f /var/www/helphere/shared/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [2360f8a2] Command: [ -f /var/www/helphere/shared/config/secrets.yml ]
+ DEBUG [2360f8a2] Finished in 0.380 seconds with exit status 0 (successful).
+ DEBUG [e5348707] Running [ -f /var/www/helphere/current/REVISION ] as deploy@45.55.62.16
+ DEBUG [e5348707] Command: [ -f /var/www/helphere/current/REVISION ]
+ DEBUG [e5348707] Finished in 0.315 seconds with exit status 0 (successful).
+ DEBUG [dbf3d077] Running /usr/bin/env cat /var/www/helphere/current/REVISION 2>/dev/null as deploy@45.55.62.16
+ DEBUG [dbf3d077] Command: /usr/bin/env cat /var/www/helphere/current/REVISION 2>/dev/null
+ DEBUG [dbf3d077] 	86975f20993768f0d3b38efb40db646a4f3596d9
+ DEBUG [dbf3d077] Finished in 0.381 seconds with exit status 0 (successful).
+ DEBUG [f0b10299] Running [ -f /var/www/helphere/repo/HEAD ] as deploy@45.55.62.16
+ DEBUG [f0b10299] Command: [ -f /var/www/helphere/repo/HEAD ]
+ DEBUG [f0b10299] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/helphere/repo
+ DEBUG [2b3e7d3f] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [2b3e7d3f] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [2b3e7d3f] Finished in 0.371 seconds with exit status 0 (successful).
+  INFO [a11d42e2] Running /usr/bin/env git remote set-url origin https://github.com/yurilimma/helphere.git as deploy@45.55.62.16
+ DEBUG [a11d42e2] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git remote set-url origin https://github.com/yurilimma/helphere.git )
+  INFO [a11d42e2] Finished in 0.379 seconds with exit status 0 (successful).
+  INFO [5e9251dd] Running /usr/bin/env git remote update --prune as deploy@45.55.62.16
+ DEBUG [5e9251dd] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5e9251dd] 	Fetching origin
+ DEBUG [5e9251dd] 	From https://github.com/yurilimma/helphere
+   7d5311b..29fd775  master     -> master
+  INFO [5e9251dd] Finished in 1.331 seconds with exit status 0 (successful).
+ DEBUG [19682abb] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [19682abb] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [19682abb] Finished in 0.370 seconds with exit status 0 (successful).
+  INFO [4d5000a8] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152 as deploy@45.55.62.16
+ DEBUG [4d5000a8] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152 )
+  INFO [4d5000a8] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [69b1743e] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/helphere/releases/20171109093152 as deploy@45.55.62.16
+ DEBUG [69b1743e] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/helphere/releases/20171109093152 )
+  INFO [69b1743e] Finished in 0.655 seconds with exit status 0 (successful).
+ DEBUG [c4953d6a] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [c4953d6a] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [c4953d6a] Finished in 0.364 seconds with exit status 0 (successful).
+ DEBUG [3230e281] Running /usr/bin/env git rev-list --max-count=1 master as deploy@45.55.62.16
+ DEBUG [3230e281] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3230e281] 	29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337
+ DEBUG [3230e281] Finished in 0.386 seconds with exit status 0 (successful).
+ DEBUG [6fead7ce] Running if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [6fead7ce] Command: if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi
+ DEBUG [6fead7ce] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO [39961a93] Running /usr/bin/env echo "29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337" >> REVISION as deploy@45.55.62.16
+ DEBUG [39961a93] Command: cd /var/www/helphere/releases/20171109093152 && /usr/bin/env echo "29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337" >> REVISION
+  INFO [39961a93] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO [475b2a21] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152/config as deploy@45.55.62.16
+ DEBUG [475b2a21] Command: /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152/config
+  INFO [475b2a21] Finished in 0.375 seconds with exit status 0 (successful).
+ DEBUG [a2f3815e] Running [ -L /var/www/helphere/releases/20171109093152/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [a2f3815e] Command: [ -L /var/www/helphere/releases/20171109093152/config/database.yml ]
+ DEBUG [a2f3815e] Finished in 0.368 seconds with exit status 1 (failed).
+ DEBUG [fd33d0a8] Running [ -f /var/www/helphere/releases/20171109093152/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [fd33d0a8] Command: [ -f /var/www/helphere/releases/20171109093152/config/database.yml ]
+ DEBUG [fd33d0a8] Finished in 0.375 seconds with exit status 0 (successful).
+  INFO [9bf8b36d] Running /usr/bin/env rm /var/www/helphere/releases/20171109093152/config/database.yml as deploy@45.55.62.16
+ DEBUG [9bf8b36d] Command: /usr/bin/env rm /var/www/helphere/releases/20171109093152/config/database.yml
+  INFO [9bf8b36d] Finished in 0.376 seconds with exit status 0 (successful).
+  INFO [e3c953fe] Running /usr/bin/env ln -s /var/www/helphere/shared/config/database.yml /var/www/helphere/releases/20171109093152/config/database.yml as deploy@45.55.62.16
+ DEBUG [e3c953fe] Command: /usr/bin/env ln -s /var/www/helphere/shared/config/database.yml /var/www/helphere/releases/20171109093152/config/database.yml
+  INFO [e3c953fe] Finished in 0.384 seconds with exit status 0 (successful).
+ DEBUG [7594aba0] Running [ -L /var/www/helphere/releases/20171109093152/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [7594aba0] Command: [ -L /var/www/helphere/releases/20171109093152/config/secrets.yml ]
+ DEBUG [7594aba0] Finished in 0.367 seconds with exit status 1 (failed).
+ DEBUG [4398a155] Running [ -f /var/www/helphere/releases/20171109093152/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [4398a155] Command: [ -f /var/www/helphere/releases/20171109093152/config/secrets.yml ]
+ DEBUG [4398a155] Finished in 0.368 seconds with exit status 0 (successful).
+  INFO [b1dd315e] Running /usr/bin/env rm /var/www/helphere/releases/20171109093152/config/secrets.yml as deploy@45.55.62.16
+ DEBUG [b1dd315e] Command: /usr/bin/env rm /var/www/helphere/releases/20171109093152/config/secrets.yml
+  INFO [b1dd315e] Finished in 0.371 seconds with exit status 0 (successful).
+  INFO [8996acdc] Running /usr/bin/env ln -s /var/www/helphere/shared/config/secrets.yml /var/www/helphere/releases/20171109093152/config/secrets.yml as deploy@45.55.62.16
+ DEBUG [8996acdc] Command: /usr/bin/env ln -s /var/www/helphere/shared/config/secrets.yml /var/www/helphere/releases/20171109093152/config/secrets.yml
+  INFO [8996acdc] Finished in 0.369 seconds with exit status 0 (successful).
+  INFO [714b6309] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152 /var/www/helphere/releases/20171109093152/tmp /var/www/helphere/releases/20171109093152/public as deploy@45.55.62.16
+ DEBUG [714b6309] Command: /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152 /var/www/helphere/releases/20171109093152/tmp /var/www/helphere/releases/20171109093152/public
+  INFO [714b6309] Finished in 0.371 seconds with exit status 0 (successful).
+ DEBUG [b38db43e] Running [ -L /var/www/helphere/releases/20171109093152/log ] as deploy@45.55.62.16
+ DEBUG [b38db43e] Command: [ -L /var/www/helphere/releases/20171109093152/log ]
+ DEBUG [b38db43e] Finished in 0.372 seconds with exit status 1 (failed).
+ DEBUG [5b7ad422] Running [ -d /var/www/helphere/releases/20171109093152/log ] as deploy@45.55.62.16
+ DEBUG [5b7ad422] Command: [ -d /var/www/helphere/releases/20171109093152/log ]
+ DEBUG [5b7ad422] Finished in 0.370 seconds with exit status 0 (successful).
+  INFO [56c33d65] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171109093152/log as deploy@45.55.62.16
+ DEBUG [56c33d65] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171109093152/log
+  INFO [56c33d65] Finished in 0.379 seconds with exit status 0 (successful).
+  INFO [0a8a82f1] Running /usr/bin/env ln -s /var/www/helphere/shared/log /var/www/helphere/releases/20171109093152/log as deploy@45.55.62.16
+ DEBUG [0a8a82f1] Command: /usr/bin/env ln -s /var/www/helphere/shared/log /var/www/helphere/releases/20171109093152/log
+  INFO [0a8a82f1] Finished in 0.368 seconds with exit status 0 (successful).
+ DEBUG [2eeb854f] Running [ -L /var/www/helphere/releases/20171109093152/tmp/pids ] as deploy@45.55.62.16
+ DEBUG [2eeb854f] Command: [ -L /var/www/helphere/releases/20171109093152/tmp/pids ]
+ DEBUG [2eeb854f] Finished in 0.371 seconds with exit status 1 (failed).
+ DEBUG [9538ec2d] Running [ -d /var/www/helphere/releases/20171109093152/tmp/pids ] as deploy@45.55.62.16
+ DEBUG [9538ec2d] Command: [ -d /var/www/helphere/releases/20171109093152/tmp/pids ]
+ DEBUG [9538ec2d] Finished in 0.377 seconds with exit status 1 (failed).
+  INFO [a4feb130] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/pids /var/www/helphere/releases/20171109093152/tmp/pids as deploy@45.55.62.16
+ DEBUG [a4feb130] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/pids /var/www/helphere/releases/20171109093152/tmp/pids
+  INFO [a4feb130] Finished in 0.378 seconds with exit status 0 (successful).
+ DEBUG [4c89ea5f] Running [ -L /var/www/helphere/releases/20171109093152/tmp/cache ] as deploy@45.55.62.16
+ DEBUG [4c89ea5f] Command: [ -L /var/www/helphere/releases/20171109093152/tmp/cache ]
+ DEBUG [4c89ea5f] Finished in 0.361 seconds with exit status 1 (failed).
+ DEBUG [51d47eec] Running [ -d /var/www/helphere/releases/20171109093152/tmp/cache ] as deploy@45.55.62.16
+ DEBUG [51d47eec] Command: [ -d /var/www/helphere/releases/20171109093152/tmp/cache ]
+ DEBUG [51d47eec] Finished in 0.354 seconds with exit status 1 (failed).
+  INFO [4abe92aa] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/cache /var/www/helphere/releases/20171109093152/tmp/cache as deploy@45.55.62.16
+ DEBUG [4abe92aa] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/cache /var/www/helphere/releases/20171109093152/tmp/cache
+  INFO [4abe92aa] Finished in 0.374 seconds with exit status 0 (successful).
+ DEBUG [57498ce6] Running [ -L /var/www/helphere/releases/20171109093152/tmp/sockets ] as deploy@45.55.62.16
+ DEBUG [57498ce6] Command: [ -L /var/www/helphere/releases/20171109093152/tmp/sockets ]
+ DEBUG [57498ce6] Finished in 0.381 seconds with exit status 1 (failed).
+ DEBUG [97905bb4] Running [ -d /var/www/helphere/releases/20171109093152/tmp/sockets ] as deploy@45.55.62.16
+ DEBUG [97905bb4] Command: [ -d /var/www/helphere/releases/20171109093152/tmp/sockets ]
+ DEBUG [97905bb4] Finished in 0.378 seconds with exit status 1 (failed).
+  INFO [a7044f32] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/sockets /var/www/helphere/releases/20171109093152/tmp/sockets as deploy@45.55.62.16
+ DEBUG [a7044f32] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/sockets /var/www/helphere/releases/20171109093152/tmp/sockets
+  INFO [a7044f32] Finished in 0.380 seconds with exit status 0 (successful).
+ DEBUG [d482b0bd] Running [ -L /var/www/helphere/releases/20171109093152/public/system ] as deploy@45.55.62.16
+ DEBUG [d482b0bd] Command: [ -L /var/www/helphere/releases/20171109093152/public/system ]
+ DEBUG [d482b0bd] Finished in 0.362 seconds with exit status 1 (failed).
+ DEBUG [dfb2ee1f] Running [ -d /var/www/helphere/releases/20171109093152/public/system ] as deploy@45.55.62.16
+ DEBUG [dfb2ee1f] Command: [ -d /var/www/helphere/releases/20171109093152/public/system ]
+ DEBUG [dfb2ee1f] Finished in 0.378 seconds with exit status 0 (successful).
+  INFO [cf2172c7] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171109093152/public/system as deploy@45.55.62.16
+ DEBUG [cf2172c7] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171109093152/public/system
+  INFO [cf2172c7] Finished in 0.379 seconds with exit status 0 (successful).
+  INFO [39ba351e] Running /usr/bin/env ln -s /var/www/helphere/shared/public/system /var/www/helphere/releases/20171109093152/public/system as deploy@45.55.62.16
+ DEBUG [39ba351e] Command: /usr/bin/env ln -s /var/www/helphere/shared/public/system /var/www/helphere/releases/20171109093152/public/system
+  INFO [39ba351e] Finished in 0.374 seconds with exit status 0 (successful).
+ DEBUG [869e1c35] Running [ -L /var/www/helphere/releases/20171109093152/public/assets ] as deploy@45.55.62.16
+ DEBUG [869e1c35] Command: [ -L /var/www/helphere/releases/20171109093152/public/assets ]
+ DEBUG [869e1c35] Finished in 0.361 seconds with exit status 1 (failed).
+ DEBUG [be7cb241] Running [ -d /var/www/helphere/releases/20171109093152/public/assets ] as deploy@45.55.62.16
+ DEBUG [be7cb241] Command: [ -d /var/www/helphere/releases/20171109093152/public/assets ]
+ DEBUG [be7cb241] Finished in 0.369 seconds with exit status 1 (failed).
+  INFO [43524d89] Running /usr/bin/env ln -s /var/www/helphere/shared/public/assets /var/www/helphere/releases/20171109093152/public/assets as deploy@45.55.62.16
+ DEBUG [43524d89] Command: /usr/bin/env ln -s /var/www/helphere/shared/public/assets /var/www/helphere/releases/20171109093152/public/assets
+  INFO [43524d89] Finished in 0.369 seconds with exit status 0 (successful).
+ DEBUG [23284156] Running if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [23284156] Command: if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi
+ DEBUG [23284156] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [7007c341] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/helphere/shared/bundle as deploy@45.55.62.16
+ DEBUG [7007c341] Command: cd /var/www/helphere/releases/20171109093152 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/helphere/shared/bundle
+ DEBUG [7007c341] 	The following gems are missing
+ DEBUG [7007c341] 	 * net-ssh (4.2.0)
+ DEBUG [7007c341] 	 * net-scp (1.2.1)
+ DEBUG [7007c341] 	 * sshkit (1.14.0)
+ DEBUG [7007c341] 	 * airbrussh (1.3.0)
+ DEBUG [7007c341] 	 * coderay (1.1.2)
+ DEBUG [7007c341] 	 * erubi (1.6.1)
+ DEBUG [7007c341] 	 * better_errors (2.3.0)
+ DEBUG [7007c341] 	 * debug_inspector (0.0.3)
+ DEBUG [7007c341] 	 * binding_of_caller (0.7.2)
+ DEBUG [7007c341] 	 * byebug (9.1.0)
+ DEBUG [7007c341] 	 * capistrano (3.10.0)
+ DEBUG [7007c341] 	 * capistrano-bundler (1.3.0)
+ DEBUG [7007c341] 	 * capistrano-rails (1.3.0)
+ DEBUG [7007c341] 	 * capistrano-rvm (0.1.2)
+ DEBUG [7007c341] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [7007c341] 	 * choice (0.2.0)
+ DEBUG [7007c341] 	 * daemons (1.2.4)
+ DEBUG [7007c341] 	 * eventmachine (1.0.9.1)
+ DEBUG [7007c341] 	 * rack-protection (1.5.3)
+ DEBUG [7007c341] 	 * sinatra (1.4.8)
+ DEBUG [7007c341] 	 * thin (1.5.1)
+ DEBUG [7007c341] 	 * skinny (0.2.4)
+ DEBUG [7007c341] 	 * sqlite3 (1.3.13)
+ DEBUG [7007c341] 	 * mailcatcher (0.6.5)
+ DEBUG [7007c341] 	 * rack-cors (1.0.2)
+ DEBUG [7007c341] 	 * ruby-graphviz (1.2.3)
+ DEBUG [7007c341] 	 * rails-erd (1.5.2)
+ DEBUG [7007c341] 	 * spring (2.0.2)
+ DEBUG [7007c341] 	 * web-console (2.3.0)
+ DEBUG [7007c341] 	Install missing gems with `bundle install`
+ DEBUG [7007c341] Finished in 1.204 seconds with exit status 1 (failed).
+  INFO [9f9a0333] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/helphere/shared/bundle --without development test --deployment --quiet as deploy@45.55.62.16
+ DEBUG [9f9a0333] Command: cd /var/www/helphere/releases/20171109093152 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/helphere/shared/bundle --without development test --deployment --quiet
+ DEBUG [9f9a0333] 	The latest bundler is 1.16.0, but you are currently running 1.15.4.
+To update, run `gem install bundler`
+  INFO [9f9a0333] Finished in 4.385 seconds with exit status 0 (successful).
+ DEBUG [a6320c19] Running if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [a6320c19] Command: if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi
+ DEBUG [a6320c19] Finished in 0.381 seconds with exit status 0 (successful).
+  INFO [8a8dee7e] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@45.55.62.16
+ DEBUG [8a8dee7e] Command: cd /var/www/helphere/releases/20171109093152 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [8a8dee7e] Finished in 4.211 seconds with exit status 0 (successful).
+ DEBUG [3d5ed367] Running if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [3d5ed367] Command: if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi
+ DEBUG [3d5ed367] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [b61a38c2] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152/assets_manifest_backup as deploy@45.55.62.16
+ DEBUG [b61a38c2] Command: cd /var/www/helphere/releases/20171109093152 && /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093152/assets_manifest_backup
+  INFO [b61a38c2] Finished in 0.375 seconds with exit status 0 (successful).
+ DEBUG [e8b1ffed] Running /usr/bin/env ls /var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest* as deploy@45.55.62.16
+ DEBUG [e8b1ffed] Command: cd /var/www/helphere/releases/20171109093152 && /usr/bin/env ls /var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest*
+ DEBUG [e8b1ffed] 	/var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json
+ DEBUG [e8b1ffed] Finished in 0.374 seconds with exit status 0 (successful).
+ DEBUG [9721dd49] Running /usr/bin/env ls /var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest* as deploy@45.55.62.16
+ DEBUG [9721dd49] Command: cd /var/www/helphere/releases/20171109093152 && /usr/bin/env ls /var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest*
+ DEBUG [9721dd49] 	/var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json
+ DEBUG [9721dd49] Finished in 0.384 seconds with exit status 0 (successful).
+  INFO [34947344] Running /usr/bin/env cp /var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json /var/www/helphere/releases/20171109093152/assets_manifest_backup as deploy@45.55.62.16
+ DEBUG [34947344] Command: cd /var/www/helphere/releases/20171109093152 && /usr/bin/env cp /var/www/helphere/releases/20171109093152/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json /var/www/helphere/releases/20171109093152/assets_manifest_backup
+  INFO [34947344] Finished in 0.366 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e8f1ed53] Running if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [e8f1ed53] Command: if test ! -d /var/www/helphere/releases/20171109093152; then echo "Directory does not exist '/var/www/helphere/releases/20171109093152'" 1>&2; false; fi
+ DEBUG [e8f1ed53] Finished in 0.361 seconds with exit status 0 (successful).
+  INFO [f008443f] Running /usr/local/rvm/bin/rvm default do bundle exec rake db:migrate as deploy@45.55.62.16
+ DEBUG [f008443f] Command: cd /var/www/helphere/releases/20171109093152 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [f008443f] 	  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+ DEBUG [f008443f] 	Migrating to CreateOrders (20171107073843)
+ DEBUG [f008443f] 	== 20171107073843 CreateOrders: migrating =====================================
+ DEBUG [f008443f] 	
+ DEBUG [f008443f] 	-- create_table(:orders)
+ DEBUG [f008443f] 	
+ DEBUG [f008443f] 	rake aborted!
+ DEBUG [f008443f] 	StandardError: An error has occurred, all later migrations canceled:
+
+Index name 'index_orders_on_ad_id' on table 'orders' already exists
+ DEBUG [f008443f] 	/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:939:in `add_index_options'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:52:in `index_in_create'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `block in visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `map'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_creation.rb:14:in `accept'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:208:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:468:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:665:in `block in method_missing'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `block in say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:654:in `method_missing'
+/var/www/helphere/releases/20171109093152/db/migrate/20171107073843_create_orders.rb:3:in `change'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:608:in `exec_migration'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:592:in `block (2 levels) in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:591:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:292:in `with_connection'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:590:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:768:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:998:in `block in execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:1046:in `ddl_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:997:in `execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:959:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:823:in `up'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:801:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/rake-12.1.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [f008443f] 	ArgumentError: Index name 'index_orders_on_ad_id' on table 'orders' already exists
+ DEBUG [f008443f] 	/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:939:in `add_index_options'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:52:in `index_in_create'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `block in visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `map'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_creation.rb:14:in `accept'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:208:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:468:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:665:in `block in method_missing'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `block in say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:654:in `method_missing'
+/var/www/helphere/releases/20171109093152/db/migrate/20171107073843_create_orders.rb:3:in `change'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:608:in `exec_migration'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:592:in `block (2 levels) in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:591:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:292:in `with_connection'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:590:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:768:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:998:in `block in execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:1046:in `ddl_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:997:in `execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:959:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:823:in `up'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:801:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/rake-12.1.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [f008443f] 	Tasks: TOP => db:migrate
+ DEBUG [f008443f] 	(See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-11-09 09:37:48 +0000 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f184d41d] Running [ -d ~/.rvm ] as deploy@45.55.62.16
+ DEBUG [f184d41d] Command: [ -d ~/.rvm ]
+ DEBUG [f184d41d] Finished in 1.607 seconds with exit status 1 (failed).
+ DEBUG [cfc83526] Running [ -d /usr/local/rvm ] as deploy@45.55.62.16
+ DEBUG [cfc83526] Command: [ -d /usr/local/rvm ]
+ DEBUG [cfc83526] Finished in 0.359 seconds with exit status 0 (successful).
+ DEBUG [b41ae1d8] Running /usr/local/rvm/bin/rvm version as deploy@45.55.62.16
+ DEBUG [b41ae1d8] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [b41ae1d8] 	rvm 1.29.3 (master) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [b41ae1d8] Finished in 0.543 seconds with exit status 0 (successful).
+ DEBUG [186f9c21] Running /usr/local/rvm/bin/rvm current as deploy@45.55.62.16
+ DEBUG [186f9c21] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [186f9c21] 	ruby-2.3.5
+ DEBUG [186f9c21] Finished in 0.523 seconds with exit status 0 (successful).
+ DEBUG [7c0ed305] Running /usr/local/rvm/bin/rvm default do ruby --version as deploy@45.55.62.16
+ DEBUG [7c0ed305] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [7c0ed305] 	ruby 2.3.5p376 (2017-09-14 revision 59905) [x86_64-linux]
+ DEBUG [7c0ed305] Finished in 0.688 seconds with exit status 0 (successful).
+  INFO [78612768] Running /usr/bin/env mkdir -p /tmp as deploy@45.55.62.16
+ DEBUG [78612768] Command: /usr/bin/env mkdir -p /tmp
+  INFO [78612768] Finished in 0.355 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 0.0%
+  INFO Uploading /tmp/git-ssh-HelpHere-production-vagrant.sh 100.0%
+  INFO [3f3176cb] Running /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh as deploy@45.55.62.16
+ DEBUG [3f3176cb] Command: /usr/bin/env chmod 700 /tmp/git-ssh-HelpHere-production-vagrant.sh
+  INFO [3f3176cb] Finished in 0.392 seconds with exit status 0 (successful).
+  INFO [cc94db1e] Running /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD as deploy@45.55.62.16
+ DEBUG [cc94db1e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git ls-remote https://github.com/yurilimma/helphere.git HEAD )
+ DEBUG [cc94db1e] 	29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337	HEAD
+  INFO [cc94db1e] Finished in 0.630 seconds with exit status 0 (successful).
+  INFO [759623f2] Running /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases as deploy@45.55.62.16
+ DEBUG [759623f2] Command: /usr/bin/env mkdir -p /var/www/helphere/shared /var/www/helphere/releases
+  INFO [759623f2] Finished in 0.381 seconds with exit status 0 (successful).
+  INFO [97269047] Running /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets as deploy@45.55.62.16
+ DEBUG [97269047] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/log /var/www/helphere/shared/tmp/pids /var/www/helphere/shared/tmp/cache /var/www/helphere/shared/tmp/sockets /var/www/helphere/shared/public/system /var/www/helphere/shared/public/assets
+  INFO [97269047] Finished in 0.349 seconds with exit status 0 (successful).
+  INFO [a4437618] Running /usr/bin/env mkdir -p /var/www/helphere/shared/config as deploy@45.55.62.16
+ DEBUG [a4437618] Command: /usr/bin/env mkdir -p /var/www/helphere/shared/config
+  INFO [a4437618] Finished in 0.392 seconds with exit status 0 (successful).
+ DEBUG [0160a88f] Running [ -f /var/www/helphere/shared/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [0160a88f] Command: [ -f /var/www/helphere/shared/config/database.yml ]
+ DEBUG [0160a88f] Finished in 0.360 seconds with exit status 0 (successful).
+ DEBUG [bb56b0a6] Running [ -f /var/www/helphere/shared/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [bb56b0a6] Command: [ -f /var/www/helphere/shared/config/secrets.yml ]
+ DEBUG [bb56b0a6] Finished in 0.372 seconds with exit status 0 (successful).
+ DEBUG [d6203736] Running [ -f /var/www/helphere/current/REVISION ] as deploy@45.55.62.16
+ DEBUG [d6203736] Command: [ -f /var/www/helphere/current/REVISION ]
+ DEBUG [d6203736] Finished in 0.383 seconds with exit status 0 (successful).
+ DEBUG [ab404936] Running /usr/bin/env cat /var/www/helphere/current/REVISION 2>/dev/null as deploy@45.55.62.16
+ DEBUG [ab404936] Command: /usr/bin/env cat /var/www/helphere/current/REVISION 2>/dev/null
+ DEBUG [ab404936] 	86975f20993768f0d3b38efb40db646a4f3596d9
+ DEBUG [ab404936] Finished in 0.393 seconds with exit status 0 (successful).
+ DEBUG [1a7042f7] Running [ -f /var/www/helphere/repo/HEAD ] as deploy@45.55.62.16
+ DEBUG [1a7042f7] Command: [ -f /var/www/helphere/repo/HEAD ]
+ DEBUG [1a7042f7] Finished in 0.382 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/helphere/repo
+ DEBUG [6bc5732f] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [6bc5732f] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [6bc5732f] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [ee73a119] Running /usr/bin/env git remote set-url origin https://github.com/yurilimma/helphere.git as deploy@45.55.62.16
+ DEBUG [ee73a119] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git remote set-url origin https://github.com/yurilimma/helphere.git )
+  INFO [ee73a119] Finished in 0.382 seconds with exit status 0 (successful).
+  INFO [57fbb925] Running /usr/bin/env git remote update --prune as deploy@45.55.62.16
+ DEBUG [57fbb925] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [57fbb925] 	Fetching origin
+  INFO [57fbb925] Finished in 0.578 seconds with exit status 0 (successful).
+ DEBUG [5a122a32] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [5a122a32] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [5a122a32] Finished in 0.376 seconds with exit status 0 (successful).
+  INFO [eeb6faad] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758 as deploy@45.55.62.16
+ DEBUG [eeb6faad] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758 )
+  INFO [eeb6faad] Finished in 0.358 seconds with exit status 0 (successful).
+  INFO [7edf82b3] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/helphere/releases/20171109093758 as deploy@45.55.62.16
+ DEBUG [7edf82b3] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/helphere/releases/20171109093758 )
+  INFO [7edf82b3] Finished in 0.723 seconds with exit status 0 (successful).
+ DEBUG [6b3ab00e] Running if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [6b3ab00e] Command: if test ! -d /var/www/helphere/repo; then echo "Directory does not exist '/var/www/helphere/repo'" 1>&2; false; fi
+ DEBUG [6b3ab00e] Finished in 0.373 seconds with exit status 0 (successful).
+ DEBUG [6d5a2933] Running /usr/bin/env git rev-list --max-count=1 master as deploy@45.55.62.16
+ DEBUG [6d5a2933] Command: cd /var/www/helphere/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-HelpHere-production-vagrant.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6d5a2933] 	29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337
+ DEBUG [6d5a2933] Finished in 0.385 seconds with exit status 0 (successful).
+ DEBUG [714f7c98] Running if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [714f7c98] Command: if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi
+ DEBUG [714f7c98] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [9e37d0f7] Running /usr/bin/env echo "29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337" >> REVISION as deploy@45.55.62.16
+ DEBUG [9e37d0f7] Command: cd /var/www/helphere/releases/20171109093758 && /usr/bin/env echo "29fd775f4ce33f0f3dd71235ce3fc6fe4b6c0337" >> REVISION
+  INFO [9e37d0f7] Finished in 0.356 seconds with exit status 0 (successful).
+  INFO [04cdf7f3] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758/config as deploy@45.55.62.16
+ DEBUG [04cdf7f3] Command: /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758/config
+  INFO [04cdf7f3] Finished in 0.363 seconds with exit status 0 (successful).
+ DEBUG [84bcda58] Running [ -L /var/www/helphere/releases/20171109093758/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [84bcda58] Command: [ -L /var/www/helphere/releases/20171109093758/config/database.yml ]
+ DEBUG [84bcda58] Finished in 0.368 seconds with exit status 1 (failed).
+ DEBUG [f88ef7e9] Running [ -f /var/www/helphere/releases/20171109093758/config/database.yml ] as deploy@45.55.62.16
+ DEBUG [f88ef7e9] Command: [ -f /var/www/helphere/releases/20171109093758/config/database.yml ]
+ DEBUG [f88ef7e9] Finished in 0.357 seconds with exit status 0 (successful).
+  INFO [32aeac64] Running /usr/bin/env rm /var/www/helphere/releases/20171109093758/config/database.yml as deploy@45.55.62.16
+ DEBUG [32aeac64] Command: /usr/bin/env rm /var/www/helphere/releases/20171109093758/config/database.yml
+  INFO [32aeac64] Finished in 0.348 seconds with exit status 0 (successful).
+  INFO [63a847a8] Running /usr/bin/env ln -s /var/www/helphere/shared/config/database.yml /var/www/helphere/releases/20171109093758/config/database.yml as deploy@45.55.62.16
+ DEBUG [63a847a8] Command: /usr/bin/env ln -s /var/www/helphere/shared/config/database.yml /var/www/helphere/releases/20171109093758/config/database.yml
+  INFO [63a847a8] Finished in 0.353 seconds with exit status 0 (successful).
+ DEBUG [8a38f50e] Running [ -L /var/www/helphere/releases/20171109093758/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [8a38f50e] Command: [ -L /var/www/helphere/releases/20171109093758/config/secrets.yml ]
+ DEBUG [8a38f50e] Finished in 0.368 seconds with exit status 1 (failed).
+ DEBUG [fe411667] Running [ -f /var/www/helphere/releases/20171109093758/config/secrets.yml ] as deploy@45.55.62.16
+ DEBUG [fe411667] Command: [ -f /var/www/helphere/releases/20171109093758/config/secrets.yml ]
+ DEBUG [fe411667] Finished in 0.351 seconds with exit status 0 (successful).
+  INFO [64e5b3db] Running /usr/bin/env rm /var/www/helphere/releases/20171109093758/config/secrets.yml as deploy@45.55.62.16
+ DEBUG [64e5b3db] Command: /usr/bin/env rm /var/www/helphere/releases/20171109093758/config/secrets.yml
+  INFO [64e5b3db] Finished in 0.356 seconds with exit status 0 (successful).
+  INFO [65468118] Running /usr/bin/env ln -s /var/www/helphere/shared/config/secrets.yml /var/www/helphere/releases/20171109093758/config/secrets.yml as deploy@45.55.62.16
+ DEBUG [65468118] Command: /usr/bin/env ln -s /var/www/helphere/shared/config/secrets.yml /var/www/helphere/releases/20171109093758/config/secrets.yml
+  INFO [65468118] Finished in 0.377 seconds with exit status 0 (successful).
+  INFO [47e26d01] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758 /var/www/helphere/releases/20171109093758/tmp /var/www/helphere/releases/20171109093758/public as deploy@45.55.62.16
+ DEBUG [47e26d01] Command: /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758 /var/www/helphere/releases/20171109093758/tmp /var/www/helphere/releases/20171109093758/public
+  INFO [47e26d01] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [b1fda050] Running [ -L /var/www/helphere/releases/20171109093758/log ] as deploy@45.55.62.16
+ DEBUG [b1fda050] Command: [ -L /var/www/helphere/releases/20171109093758/log ]
+ DEBUG [b1fda050] Finished in 0.379 seconds with exit status 1 (failed).
+ DEBUG [da5a4c4a] Running [ -d /var/www/helphere/releases/20171109093758/log ] as deploy@45.55.62.16
+ DEBUG [da5a4c4a] Command: [ -d /var/www/helphere/releases/20171109093758/log ]
+ DEBUG [da5a4c4a] Finished in 0.369 seconds with exit status 0 (successful).
+  INFO [9146730d] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171109093758/log as deploy@45.55.62.16
+ DEBUG [9146730d] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171109093758/log
+  INFO [9146730d] Finished in 0.386 seconds with exit status 0 (successful).
+  INFO [bf4cc770] Running /usr/bin/env ln -s /var/www/helphere/shared/log /var/www/helphere/releases/20171109093758/log as deploy@45.55.62.16
+ DEBUG [bf4cc770] Command: /usr/bin/env ln -s /var/www/helphere/shared/log /var/www/helphere/releases/20171109093758/log
+  INFO [bf4cc770] Finished in 0.385 seconds with exit status 0 (successful).
+ DEBUG [9d25662a] Running [ -L /var/www/helphere/releases/20171109093758/tmp/pids ] as deploy@45.55.62.16
+ DEBUG [9d25662a] Command: [ -L /var/www/helphere/releases/20171109093758/tmp/pids ]
+ DEBUG [9d25662a] Finished in 0.376 seconds with exit status 1 (failed).
+ DEBUG [60ad11ff] Running [ -d /var/www/helphere/releases/20171109093758/tmp/pids ] as deploy@45.55.62.16
+ DEBUG [60ad11ff] Command: [ -d /var/www/helphere/releases/20171109093758/tmp/pids ]
+ DEBUG [60ad11ff] Finished in 0.377 seconds with exit status 1 (failed).
+  INFO [f4053ec3] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/pids /var/www/helphere/releases/20171109093758/tmp/pids as deploy@45.55.62.16
+ DEBUG [f4053ec3] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/pids /var/www/helphere/releases/20171109093758/tmp/pids
+  INFO [f4053ec3] Finished in 0.376 seconds with exit status 0 (successful).
+ DEBUG [a5ebd39f] Running [ -L /var/www/helphere/releases/20171109093758/tmp/cache ] as deploy@45.55.62.16
+ DEBUG [a5ebd39f] Command: [ -L /var/www/helphere/releases/20171109093758/tmp/cache ]
+ DEBUG [a5ebd39f] Finished in 0.383 seconds with exit status 1 (failed).
+ DEBUG [03e58837] Running [ -d /var/www/helphere/releases/20171109093758/tmp/cache ] as deploy@45.55.62.16
+ DEBUG [03e58837] Command: [ -d /var/www/helphere/releases/20171109093758/tmp/cache ]
+ DEBUG [03e58837] Finished in 0.379 seconds with exit status 1 (failed).
+  INFO [b8013d6c] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/cache /var/www/helphere/releases/20171109093758/tmp/cache as deploy@45.55.62.16
+ DEBUG [b8013d6c] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/cache /var/www/helphere/releases/20171109093758/tmp/cache
+  INFO [b8013d6c] Finished in 0.380 seconds with exit status 0 (successful).
+ DEBUG [80c745ab] Running [ -L /var/www/helphere/releases/20171109093758/tmp/sockets ] as deploy@45.55.62.16
+ DEBUG [80c745ab] Command: [ -L /var/www/helphere/releases/20171109093758/tmp/sockets ]
+ DEBUG [80c745ab] Finished in 0.380 seconds with exit status 1 (failed).
+ DEBUG [0831899e] Running [ -d /var/www/helphere/releases/20171109093758/tmp/sockets ] as deploy@45.55.62.16
+ DEBUG [0831899e] Command: [ -d /var/www/helphere/releases/20171109093758/tmp/sockets ]
+ DEBUG [0831899e] Finished in 0.377 seconds with exit status 1 (failed).
+  INFO [d5a7b7c9] Running /usr/bin/env ln -s /var/www/helphere/shared/tmp/sockets /var/www/helphere/releases/20171109093758/tmp/sockets as deploy@45.55.62.16
+ DEBUG [d5a7b7c9] Command: /usr/bin/env ln -s /var/www/helphere/shared/tmp/sockets /var/www/helphere/releases/20171109093758/tmp/sockets
+  INFO [d5a7b7c9] Finished in 0.378 seconds with exit status 0 (successful).
+ DEBUG [d116353d] Running [ -L /var/www/helphere/releases/20171109093758/public/system ] as deploy@45.55.62.16
+ DEBUG [d116353d] Command: [ -L /var/www/helphere/releases/20171109093758/public/system ]
+ DEBUG [d116353d] Finished in 0.374 seconds with exit status 1 (failed).
+ DEBUG [115a2a44] Running [ -d /var/www/helphere/releases/20171109093758/public/system ] as deploy@45.55.62.16
+ DEBUG [115a2a44] Command: [ -d /var/www/helphere/releases/20171109093758/public/system ]
+ DEBUG [115a2a44] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [3507f6e8] Running /usr/bin/env rm -rf /var/www/helphere/releases/20171109093758/public/system as deploy@45.55.62.16
+ DEBUG [3507f6e8] Command: /usr/bin/env rm -rf /var/www/helphere/releases/20171109093758/public/system
+  INFO [3507f6e8] Finished in 0.384 seconds with exit status 0 (successful).
+  INFO [acc8b258] Running /usr/bin/env ln -s /var/www/helphere/shared/public/system /var/www/helphere/releases/20171109093758/public/system as deploy@45.55.62.16
+ DEBUG [acc8b258] Command: /usr/bin/env ln -s /var/www/helphere/shared/public/system /var/www/helphere/releases/20171109093758/public/system
+  INFO [acc8b258] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [37b62996] Running [ -L /var/www/helphere/releases/20171109093758/public/assets ] as deploy@45.55.62.16
+ DEBUG [37b62996] Command: [ -L /var/www/helphere/releases/20171109093758/public/assets ]
+ DEBUG [37b62996] Finished in 0.378 seconds with exit status 1 (failed).
+ DEBUG [3cefd2d3] Running [ -d /var/www/helphere/releases/20171109093758/public/assets ] as deploy@45.55.62.16
+ DEBUG [3cefd2d3] Command: [ -d /var/www/helphere/releases/20171109093758/public/assets ]
+ DEBUG [3cefd2d3] Finished in 0.380 seconds with exit status 1 (failed).
+  INFO [72c3d3fc] Running /usr/bin/env ln -s /var/www/helphere/shared/public/assets /var/www/helphere/releases/20171109093758/public/assets as deploy@45.55.62.16
+ DEBUG [72c3d3fc] Command: /usr/bin/env ln -s /var/www/helphere/shared/public/assets /var/www/helphere/releases/20171109093758/public/assets
+  INFO [72c3d3fc] Finished in 0.389 seconds with exit status 0 (successful).
+ DEBUG [83b569d2] Running if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [83b569d2] Command: if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi
+ DEBUG [83b569d2] Finished in 0.379 seconds with exit status 0 (successful).
+ DEBUG [2562a5c4] Running /usr/local/rvm/bin/rvm default do bundle check --path /var/www/helphere/shared/bundle as deploy@45.55.62.16
+ DEBUG [2562a5c4] Command: cd /var/www/helphere/releases/20171109093758 && /usr/local/rvm/bin/rvm default do bundle check --path /var/www/helphere/shared/bundle
+ DEBUG [2562a5c4] 	The following gems are missing
+ DEBUG [2562a5c4] 	 * net-ssh (4.2.0)
+ DEBUG [2562a5c4] 	 * net-scp (1.2.1)
+ DEBUG [2562a5c4] 	 * sshkit (1.14.0)
+ DEBUG [2562a5c4] 	 * airbrussh (1.3.0)
+ DEBUG [2562a5c4] 	 * coderay (1.1.2)
+ DEBUG [2562a5c4] 	 * erubi (1.6.1)
+ DEBUG [2562a5c4] 	 * better_errors (2.3.0)
+ DEBUG [2562a5c4] 	 * debug_inspector (0.0.3)
+ DEBUG [2562a5c4] 	 * binding_of_caller (0.7.2)
+ DEBUG [2562a5c4] 	 * byebug (9.1.0)
+ DEBUG [2562a5c4] 	 * capistrano (3.10.0)
+ DEBUG [2562a5c4] 	 * capistrano-bundler (1.3.0)
+ DEBUG [2562a5c4] 	 * capistrano-rails (1.3.0)
+ DEBUG [2562a5c4] 	 * capistrano-rvm (0.1.2)
+ DEBUG [2562a5c4] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [2562a5c4] 	 * choice (0.2.0)
+ DEBUG [2562a5c4] 	 * daemons (1.2.4)
+ DEBUG [2562a5c4] 	 * eventmachine (1.0.9.1)
+ DEBUG [2562a5c4] 	 * rack-protection (1.5.3)
+ DEBUG [2562a5c4] 	 * sinatra (1.4.8)
+ DEBUG [2562a5c4] 	 * thin (1.5.1)
+ DEBUG [2562a5c4] 	 * skinny (0.2.4)
+ DEBUG [2562a5c4] 	 * sqlite3 (1.3.13)
+ DEBUG [2562a5c4] 	 * mailcatcher (0.6.5)
+ DEBUG [2562a5c4] 	 * rack-cors (1.0.2)
+ DEBUG [2562a5c4] 	 * ruby-graphviz (1.2.3)
+ DEBUG [2562a5c4] 	 * rails-erd (1.5.2)
+ DEBUG [2562a5c4] 	 * spring (2.0.2)
+ DEBUG [2562a5c4] 	 * web-console (2.3.0)
+ DEBUG [2562a5c4] 	Install missing gems with `bundle install`
+ DEBUG [2562a5c4] Finished in 1.193 seconds with exit status 1 (failed).
+  INFO [804a809a] Running /usr/local/rvm/bin/rvm default do bundle install --path /var/www/helphere/shared/bundle --without development test --deployment --quiet as deploy@45.55.62.16
+ DEBUG [804a809a] Command: cd /var/www/helphere/releases/20171109093758 && /usr/local/rvm/bin/rvm default do bundle install --path /var/www/helphere/shared/bundle --without development test --deployment --quiet
+ DEBUG [804a809a] 	The latest bundler is 1.16.0, but you are currently running 1.15.4.
+To update, run `gem install bundler`
+  INFO [804a809a] Finished in 4.514 seconds with exit status 0 (successful).
+ DEBUG [de804dae] Running if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [de804dae] Command: if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi
+ DEBUG [de804dae] Finished in 0.372 seconds with exit status 0 (successful).
+  INFO [420163a3] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@45.55.62.16
+ DEBUG [420163a3] Command: cd /var/www/helphere/releases/20171109093758 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [420163a3] Finished in 3.893 seconds with exit status 0 (successful).
+ DEBUG [41cf2c04] Running if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [41cf2c04] Command: if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi
+ DEBUG [41cf2c04] Finished in 0.362 seconds with exit status 0 (successful).
+  INFO [97e65eec] Running /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758/assets_manifest_backup as deploy@45.55.62.16
+ DEBUG [97e65eec] Command: cd /var/www/helphere/releases/20171109093758 && /usr/bin/env mkdir -p /var/www/helphere/releases/20171109093758/assets_manifest_backup
+  INFO [97e65eec] Finished in 0.386 seconds with exit status 0 (successful).
+ DEBUG [696a2405] Running /usr/bin/env ls /var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest* as deploy@45.55.62.16
+ DEBUG [696a2405] Command: cd /var/www/helphere/releases/20171109093758 && /usr/bin/env ls /var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest*
+ DEBUG [696a2405] 	/var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json
+ DEBUG [696a2405] Finished in 0.389 seconds with exit status 0 (successful).
+ DEBUG [e21bbb05] Running /usr/bin/env ls /var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest* as deploy@45.55.62.16
+ DEBUG [e21bbb05] Command: cd /var/www/helphere/releases/20171109093758 && /usr/bin/env ls /var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest*
+ DEBUG [e21bbb05] 	/var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json
+ DEBUG [e21bbb05] Finished in 0.394 seconds with exit status 0 (successful).
+  INFO [fe3a1303] Running /usr/bin/env cp /var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json /var/www/helphere/releases/20171109093758/assets_manifest_backup as deploy@45.55.62.16
+ DEBUG [fe3a1303] Command: cd /var/www/helphere/releases/20171109093758 && /usr/bin/env cp /var/www/helphere/releases/20171109093758/public/assets/.sprockets-manifest-b54e34febc1f63b4a0a8144823f21aaf.json /var/www/helphere/releases/20171109093758/assets_manifest_backup
+  INFO [fe3a1303] Finished in 0.377 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [75a9a917] Running if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi as deploy@45.55.62.16
+ DEBUG [75a9a917] Command: if test ! -d /var/www/helphere/releases/20171109093758; then echo "Directory does not exist '/var/www/helphere/releases/20171109093758'" 1>&2; false; fi
+ DEBUG [75a9a917] Finished in 0.361 seconds with exit status 0 (successful).
+  INFO [260eeab6] Running /usr/local/rvm/bin/rvm default do bundle exec rake db:migrate as deploy@45.55.62.16
+ DEBUG [260eeab6] Command: cd /var/www/helphere/releases/20171109093758 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake db:migrate )
+ DEBUG [260eeab6] 	  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+ DEBUG [260eeab6] 	Migrating to CreateOrders (20171107073843)
+ DEBUG [260eeab6] 	== 20171107073843 CreateOrders: migrating =====================================
+ DEBUG [260eeab6] 	
+ DEBUG [260eeab6] 	-- create_table(:orders)
+ DEBUG [260eeab6] 	
+ DEBUG [260eeab6] 	rake aborted!
+ DEBUG [260eeab6] 	StandardError: An error has occurred, all later migrations canceled:
+
+Index name 'index_orders_on_ad_id' on table 'orders' already exists
+ DEBUG [260eeab6] 	/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:939:in `add_index_options'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:52:in `index_in_create'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `block in visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `map'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_creation.rb:14:in `accept'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:208:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:468:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:665:in `block in method_missing'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `block in say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:654:in `method_missing'
+/var/www/helphere/releases/20171109093758/db/migrate/20171107073843_create_orders.rb:3:in `change'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:608:in `exec_migration'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:592:in `block (2 levels) in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:591:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:292:in `with_connection'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:590:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:768:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:998:in `block in execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:1046:in `ddl_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:997:in `execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:959:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:823:in `up'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:801:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/rake-12.1.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [260eeab6] 	ArgumentError: Index name 'index_orders_on_ad_id' on table 'orders' already exists
+ DEBUG [260eeab6] 	/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:939:in `add_index_options'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:52:in `index_in_create'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `block in visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `map'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:25:in `visit_TableDefinition'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_creation.rb:14:in `accept'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/schema_statements.rb:208:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract_mysql_adapter.rb:468:in `create_table'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:665:in `block in method_missing'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `block in say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:634:in `say_with_time'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:654:in `method_missing'
+/var/www/helphere/releases/20171109093758/db/migrate/20171107073843_create_orders.rb:3:in `change'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:608:in `exec_migration'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:592:in `block (2 levels) in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:591:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:292:in `with_connection'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:590:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:768:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:998:in `block in execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:1046:in `ddl_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:997:in `execute_migration_in_transaction'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:959:in `block in migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `each'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:955:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:823:in `up'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/migration.rb:801:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/tasks/database_tasks.rb:137:in `migrate'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/activerecord-4.2.5/lib/active_record/railties/databases.rake:44:in `block (2 levels) in <top (required)>'
+/var/www/helphere/shared/bundle/ruby/2.3.0/gems/rake-12.1.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:74:in `kernel_load'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:362:in `exec'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor.rb:387:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:22:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/vendor/thor/lib/thor/base.rb:466:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/cli.rb:13:in `start'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:30:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/lib/bundler/friendly_errors.rb:121:in `with_friendly_errors'
+/usr/local/rvm/gems/ruby-2.3.5/gems/bundler-1.15.4/exe/bundle:22:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.5/bin/bundle:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.5/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [260eeab6] 	Tasks: TOP => db:migrate
+ DEBUG [260eeab6] 	(See full trace by running task with --trace)
